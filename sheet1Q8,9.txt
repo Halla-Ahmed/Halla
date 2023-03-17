@@ -1,0 +1,5 @@
+Q8)What are the benefits of data field encapsulation?
+protects data and very flexible & helps in protecting variables and methods from outside interference.
+Q9)Test.id = 45; 
+id is not a static variable 
+this.id=45;
