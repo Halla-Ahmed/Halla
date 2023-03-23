@@ -1,13 +1,34 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        person p=new person("jumana","LA","55899","mojjjj");
-        student s=new student("omar","alexx","5858","wvwvw");
-        Employee e=new Employee("jtjt",5969,"hayeh","haha","jdidi","heheoo");
-        Faculty f=new Faculty(0,9,"proff",7070,"halla","masr","201920","halljalallala");
-        System.out.println(p.toString());
-        System.out.println(s.toString());
-        System.out.println(e.toString());
-        System.out.println(f.toString());
-        System.out.println(a.toString());
+        Scanner s=new Scanner(System.in);
+        int numbers=s.nextInt();
+        ArrayList<Integer>list=new ArrayList<>();
+        for(int i=0;i<list.size();i++){
+            list.add(numbers);
+        }
+        sort(list);
+        System.out.println(list);
+
+
     }
 }
+public static void sort(ArrayList<Integer>list){
+    for (int i = 0; i < list.size() - 1; i++) {
+        int min = list.get(i);
+        int index = i;
+
+        for (int j = i + 1; j < list.size(); j++) {
+            if (min > list.get(j)) {
+                min= list.get(j);
+                index = j;
+            }
+        }
+
+        if (index != i) {
+            list.set(index, list.get(i));
+            list.set(i, min);
+        }
+    }
+    }}
